@@ -55,6 +55,25 @@ The application is configured for Monad Testnet, using chain ID `10143`.
 
 Predictions are recorded onchain through the deployed ProofOfTaste contract.
 
+### Deployed Contract
+
+- **Network:** Monad Testnet
+- **Chain ID:** `10143` (`0x279f`)
+- **Contract:** `ProofOfTaste`
+- **Address:** `0xa34C3c87289007b897F46D74EA4A647De6b5cB05`
+
+The frontend reads prediction records from this deployed contract and uses it to submit predictions and resolve outcomes.
+
+### Scout Score and Leaderboard
+
+Scout Score awards **10 points per correct, resolved prediction**. Incorrect resolved predictions earn zero points.
+
+The leaderboard groups wallets found in the prediction history loaded by the frontend. It is not a guaranteed complete registry of every user.
+
+### Resolution Limitation
+
+Prediction outcomes are manually entered by the contract owner; they are not independently verified by an external oracle. Each prediction is resolved individually, and a confirmed resolution is permanent.
+
 ## ⚠️ MVP Notes
 
 The artist catalogue is curated for the launch demo. Prediction outcomes require resolution by the contract owner. This prototype does not use real-money betting or claim to have an automated external outcome oracle.
